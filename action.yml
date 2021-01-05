@@ -1,0 +1,10 @@
+name: 'Checkout files'
+description: "Checkout a list of specified files from the repository's main branch"
+inputs:
+  restore_branch:
+    description: 'GitHub repository branch to restore files'
+    default: 'main'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
