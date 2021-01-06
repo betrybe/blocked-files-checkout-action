@@ -1,9 +1,14 @@
 #!/bin/sh -l
 set -x
 
-git pull origin "$INPUT_RESTORE_BRANCH" --ff-only --allow-unrelated-histories
+git fetch origin "$INPUT_RESTORE_BRANCH"
 
-files=$(yq r .trybe/config.yml 'ignore_files(.==*)')
+if [ $? != 0 ]; then
+  printf "Execution error $?"
+  exit 1
+fi
+
+files=$(yq r trybe.yml 'ignore_files(.==*)')
 
 for file in $files; do
   git restore --source origin/master -- "$file"
