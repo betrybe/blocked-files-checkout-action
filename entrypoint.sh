@@ -11,5 +11,5 @@ fi
 files=$(yq r trybe.yml 'ignore_files(.==*)')
 
 for file in $files; do
-  git restore --source origin/master -- "$file"
+  git restore --source "origin/$INPUT_RESTORE_BRANCH" -- "$file"
 done
