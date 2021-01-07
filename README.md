@@ -33,7 +33,7 @@ jobs:
 
 ### Ignore files
 
-Para definir quais arquivos devem ser restaurados para desfazer as alteracões do estudante é necessário adicionar o diretório ou o caminho do arquivo no `trybe.yml` conforme exemplo abaixo:
+Para definir quais arquivos devem ser restaurados para desfazer as alteracões da pessoa estudante é necessário adicionar o diretório ou o caminho do arquivo no `trybe.yml` conforme exemplo abaixo:
 
 ```yaml
 ignore_files:
