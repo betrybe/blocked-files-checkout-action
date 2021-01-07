@@ -1,6 +1,6 @@
 # Trybe Blocked Files Checkout Action
 
-Github Action que restaura uma lista de arquivos da branch principal do repositório do projeto. Estes arquivos não podem ser alterados pelo estudante e são definidos no arquivo `trybe.yml` com a chave `ignore_files`.
+Github Action que restaura uma lista de arquivos da branch principal do repositório do projeto. Estes arquivos não podem ser alterados pela pessoa estudante e são definidos no arquivo `trybe.yml` com a chave `ignore_files`.
 
 Para chamar esta action é necessário adicionar um *step* no arquivo `.github/workflows/main.yml` do repositório do projeto.
 
