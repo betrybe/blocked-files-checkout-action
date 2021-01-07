@@ -27,7 +27,7 @@ jobs:
 
 ### Inputs
 
-#### `restore_branch` **(obrigaório)**
+#### `restore_branch` **(obrigatório)**
 
 **Branch** do repositório do projeto para qual os arquivos serão restaurados. O valor **default** é `main`.
 
