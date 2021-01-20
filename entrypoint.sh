@@ -8,7 +8,7 @@ if [ $? != 0 ]; then
   exit 1
 fi
 
-files=$(yq r trybe.yml 'ignore_files(.==*)')
+files=$(yq e '.ignore_files[]' trybe.yml)
 
 for file in $files; do
   git restore --source "origin/$INPUT_RESTORE_BRANCH" -- "$file"
