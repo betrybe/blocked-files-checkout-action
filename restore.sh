@@ -1,5 +1,7 @@
 #!/bin/sh -l
-set -x
+set -e
+
+echo "Restore branch: '$INPUT_RESTORE_BRANCH'"
 
 git fetch origin "$INPUT_RESTORE_BRANCH"
 
@@ -11,5 +13,6 @@ fi
 files=$(yq e '.ignore_files[]' trybe.yml)
 
 for file in $files; do
+  echo "Restoring file '$file'..."
   git restore --source "origin/$INPUT_RESTORE_BRANCH" -- "$file"
 done
