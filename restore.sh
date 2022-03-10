@@ -11,6 +11,7 @@ if [ $? != 0 ]; then
 fi
 
 files=$(yq e '.ignore_files[]' trybe.yml)
+files=${files:+$files }".github/ .trybe/"
 
 for file in $files; do
   echo "Restoring file '$file'..."
